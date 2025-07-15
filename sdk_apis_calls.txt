@@ -1,0 +1,618 @@
+// JavaScript Example: Reading Entities
+// Filterable fields: title, description, status, completion_date, reopened_date, reopened_reason, responsible, participants, start_date, deadline, progress, priority, tags, infrastructure_cost, infrastructure_provider, total_estimated_cost, links
+async function fetchProjectEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Project`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: title, description, status, completion_date, reopened_date, reopened_reason, responsible, participants, start_date, deadline, progress, priority, tags, infrastructure_cost, infrastructure_provider, total_estimated_cost, links
+async function updateProjectEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Project/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+
+// JavaScript Example: Reading Entities
+// Filterable fields: project_id, sprint_id, title, description, status, assigned_to, role_id, seniority_level, estimated_hours, hourly_rate, total_cost, priority, start_date, deadline, completion_date
+async function fetchTaskEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Task`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: project_id, sprint_id, title, description, status, assigned_to, role_id, seniority_level, estimated_hours, hourly_rate, total_cost, priority, start_date, deadline, completion_date
+async function updateTaskEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Task/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Reading Entities
+// Filterable fields: title, project_id, date, attendees, notes, action_items
+async function fetchMeetingEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Meeting`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: title, project_id, date, attendees, notes, action_items
+async function updateMeetingEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Meeting/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Reading Entities
+// Filterable fields: project_id, phase, items, ai_generated
+async function fetchChecklistEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Checklist`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: project_id, phase, items, ai_generated
+async function updateChecklistEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Checklist/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Reading Entities
+// Filterable fields: project_id, author, content, type, priority, status
+async function fetchFeedbackEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Feedback`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: project_id, author, content, type, priority, status
+async function updateFeedbackEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Feedback/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Reading Entities
+// Filterable fields: content, type, project_id, chat_id, chat_title, action_taken
+async function fetchChatMessageEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/ChatMessage`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: content, type, project_id, chat_id, chat_title, action_taken
+async function updateChatMessageEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/ChatMessage/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Reading Entities
+// Filterable fields: title, client_name, client_email, project_id, description, scope, requirements, items, total_value, proposed_deadline, start_date, end_date, payment_terms, validity_period, additional_notes, responsible, status, ai_generated, created_date, last_modified_date, sent_date, decision_date
+async function fetchBudgetEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Budget`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: title, client_name, client_email, project_id, description, scope, requirements, items, total_value, proposed_deadline, start_date, end_date, payment_terms, validity_period, additional_notes, responsible, status, ai_generated, created_date, last_modified_date, sent_date, decision_date
+async function updateBudgetEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Budget/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Reading Entities
+// Filterable fields: title, description, category, seniority_levels, status, skills
+async function fetchRoleEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Role`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: title, description, category, seniority_levels, status, skills
+async function updateRoleEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Role/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Reading Entities
+// Filterable fields: project_id, created_date, requirements, environments, selected_provider, monthly_cost, aws_solution, azure_solution, gcp_solution, vps_solution, architecture_recommendations, security_recommendations, status
+async function fetchInfrastructureEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Infrastructure`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: project_id, created_date, requirements, environments, selected_provider, monthly_cost, aws_solution, azure_solution, gcp_solution, vps_solution, architecture_recommendations, security_recommendations, status
+async function updateInfrastructureEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Infrastructure/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Reading Entities
+// Filterable fields: project_id, image_url, generated_date, title, description
+async function fetchDiagramArchitectureEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/DiagramArchitecture`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: project_id, image_url, generated_date, title, description
+async function updateDiagramArchitectureEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/DiagramArchitecture/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Reading Entities
+// Filterable fields: date, project_id, user_email, done_yesterday, doing_today, blockers, summary
+async function fetchDailyNoteEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/DailyNote`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: date, project_id, user_email, done_yesterday, doing_today, blockers, summary
+async function updateDailyNoteEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/DailyNote/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Reading Entities
+// Filterable fields: project_id, date, analysis, metrics
+async function fetchCostInsightEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/CostInsight`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: project_id, date, analysis, metrics
+async function updateCostInsightEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/CostInsight/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Reading Entities
+// Filterable fields: project_id, date, analysis_type, analysis, metrics
+async function fetchAnalysisInsightEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/AnalysisInsight`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: project_id, date, analysis_type, analysis, metrics
+async function updateAnalysisInsightEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/AnalysisInsight/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Reading Entities
+// Filterable fields: project_id, title, description, framework, framework_type, status, created_date, last_updated, progress, responsible, metrics, ai_generated, test_scenarios
+async function fetchTestPlanEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/TestPlan`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: project_id, title, description, framework, framework_type, status, created_date, last_updated, progress, responsible, metrics, ai_generated, test_scenarios
+async function updateTestPlanEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/TestPlan/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Reading Entities
+// Filterable fields: test_plan_id, scenario_index, title, description, preconditions, steps, status, priority, execution_date, executed_by, execution_time, tags
+async function fetchTestCaseEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/TestCase`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: test_plan_id, scenario_index, title, description, preconditions, steps, status, priority, execution_date, executed_by, execution_time, tags
+async function updateTestCaseEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/TestCase/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Reading Entities
+// Filterable fields: test_plan_id, test_case_id, project_id, title, description, steps_to_reproduce, expected_result, actual_result, severity, priority, status, environment, browser_version, os_version, assigned_to, reported_by, reported_date, resolved_date, attachments, related_task_id, comments
+async function fetchBugEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Bug`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: test_plan_id, test_case_id, project_id, title, description, steps_to_reproduce, expected_result, actual_result, severity, priority, status, environment, browser_version, os_version, assigned_to, reported_by, reported_date, resolved_date, attachments, related_task_id, comments
+async function updateBugEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Bug/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Reading Entities
+// Filterable fields: project_id, title, period_start, period_end, prepared_by, status, health, health_justification, progress, highlights, completed_items, in_progress_items, blockers, risks, next_week, recommendations, custom_notes, metrics, report_url, sent_date, sent_to
+async function fetchClientReportEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/ClientReport`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: project_id, title, period_start, period_end, prepared_by, status, health, health_justification, progress, highlights, completed_items, in_progress_items, blockers, risks, next_week, recommendations, custom_notes, metrics, report_url, sent_date, sent_to
+async function updateClientReportEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/ClientReport/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Reading Entities
+// Filterable fields: title, description, user_email, status, created_date, last_modified_date, tags, analyses, improvement_suggestions, project_id
+async function fetchIdeaEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Idea`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: title, description, user_email, status, created_date, last_modified_date, tags, analyses, improvement_suggestions, project_id
+async function updateIdeaEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Idea/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Reading Entities
+// Filterable fields: content, type, item_id, author, labels, is_private
+async function fetchNoteEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Note`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: content, type, item_id, author, labels, is_private
+async function updateNoteEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Note/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Reading Entities
+// Filterable fields: name, goal, projects, start_date, end_date, status, capacity, capacity_unit, completed_points, total_points, metrics
+async function fetchSprintEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Sprint`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: name, goal, projects, start_date, end_date, status, capacity, capacity_unit, completed_points, total_points, metrics
+async function updateSprintEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/Sprint/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Reading Entities
+// Filterable fields: project_id, sprint_id, title, description, task_type, status, status_change_history, assigned_to, reporter, estimate, estimate_unit, actual_hours, priority, labels, parent_id, due_date, created_date, start_date, completion_date, attachments, board_position
+async function fetchTaskAgileEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/TaskAgile`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: project_id, sprint_id, title, description, task_type, status, status_change_history, assigned_to, reporter, estimate, estimate_unit, actual_hours, priority, labels, parent_id, due_date, created_date, start_date, completion_date, attachments, board_position
+async function updateTaskAgileEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/TaskAgile/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Reading Entities
+// Filterable fields: user_email, role_id, project_id, start_date, end_date
+async function fetchUserRoleEntities() {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/UserRole`, {
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+// JavaScript Example: Updating an Entity
+// Filterable fields: user_email, role_id, project_id, start_date, end_date
+async function updateUserRoleEntity(entityId, updateData) {
+    const response = await fetch(`https://base44.app/api/apps/67d04defdf38de9f23354a9a/entities/UserRole/${entityId}`, {
+        method: 'PUT',
+        headers: {
+            'api_key': '428e665f237545f6a8d11212865ea7dd', // or use await User.me() to get the API key
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+
